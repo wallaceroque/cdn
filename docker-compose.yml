@@ -1,0 +1,28 @@
+version: '3.3'
+
+services:
+  lb-server:
+    image: nginx:stable-alpine
+    volumes:
+      - ./lb-server/nginx.conf:/etc/nginx/nginx.conf:ro
+    ports:
+      - "80:80"
+    links:
+      - cache-server
+    networks:
+      - front-tier
+  
+  cache-server:
+    image: nginx:stable-alpine
+    volumes:
+      - ./cache-server/nginx.conf:/etc/nginx/nginx.conf:ro
+    deploy:
+      replicas: 4
+    expose: 
+      - "8000"
+    networks:
+      - front-tier
+
+networks:
+  front-tier:
+    driver: overlay
