@@ -8,6 +8,16 @@ O objetivo do CDN é servir o conteúdo de um ponto de origem mais próximo poss
 
 Servir eficientemente artefatos estáticos é algo realizado comumente na internet. No caso de conteúdo web, os servidores HTTP cumprem esse papel. O mais famoso deles é o Apache que perdeu espaço para outros como Nginx e Gwan, mais eficientes nesse quesito e que, somados às estratégias de cache, podem se obter ganhos consideráveis de performance no carregamento de páginas html, por exemplo.
 
+Para alcançar uma solução de CDN eficiente e minimamente robusta, os seguintes desafios devem ser respondidos:
+
+- Como será a infraestrutura de entrega de conteúdo ? 
+- Qual a estratégia de balanceamento de carga?
+- Qual é a estratégia do mecanismo de redirecionamento de requisição, responsável por redirecionar o cliente para o servidor de réplica mais apropriado ? (DNS Global)
+- Qual é a estratégia distribuição de conteúdo, responsável pela distribuição do servidor de origem para os servidores de réplica e manter os servidores de réplica atualizados ?
+- Quantos servidores de réplica utilizar e onde os mesmos devem estar localizados ?
+- Administração e gerenciamento dos conteúdos
+- Qual a solução de backup ?
+- Qual a solução de monitoramento ?
 
 
 
