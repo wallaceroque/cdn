@@ -1,0 +1,17 @@
+{
+  "name": "content-helper",
+  "version": "1.0.0",
+  "description": "Instala dependências para disponibilizar para outros containers.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Wallace Figueiredo",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "1.6.5",
+    "bootstrap": "3.3.7",
+    "jquery": "3.2.1",
+    "react": "15.6.1"
+  }
+}
